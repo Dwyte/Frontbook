@@ -78,7 +78,6 @@ function Login(){
 
 
 function Register(){
-	window.location.href = "profile.html";
 	let name = document.getElementById("name").value;
 	let bday = document.getElementById("bday").value;
 	let desc = document.getElementById("desc").value;
