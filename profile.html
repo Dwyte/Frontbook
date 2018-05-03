@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frontbook</title>
+
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+	<!-- <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyB3EbXlPm3cbvVmDGWsj0NCQz4vcffQGFM",
+		    authDomain: "frontbook-4d80.firebaseapp.com",
+		    databaseURL: "https://frontbook-4d80.firebaseio.com",
+		    projectId: "frontbook-4d80",
+		    storageBucket: "frontbook-4d80.appspot.com",
+		    messagingSenderId: "256324083461"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+
+	<h1>
+		<script type="text/javascript">
+			var ref = firebase.database().ref("Accounts/" + 0);
+			ref.once("value").then(function(snapshot) {
+				var name = snapshot.child("birthday").val(); // "last"
+				document.write("Welcome to FrontBook! " + name);
+				});
+		</script>
+	</h1> -->
+
+	<div style="margin: 25px 50px; border-left: 1px solid black; border-right: 1px solid black; border-top: 10px solid cyan; background: lightblue">
+		<div style="background: skyblue; padding: 5px;">
+		<b style="font-size: 40px;">Frontbook.com</b>
+		</div>
+
+		<div style="padding: 5px;">
+			<b style="font-size: 25px;"><script>document.write(localStorage.currAccName)</script></b><br>
+			-<script>document.write(localStorage.currAccDesc)</script>
+			<div>Birthday: <script>document.write(localStorage.currAccBday)</script></div>
+			<div>Email: <script>document.write(localStorage.currAccEmail)</script></div>
+			<button onclick="Logout()">Log-out</button>
+		</div>
+	<div>
+</body>
+</html>

@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<script type="text/javascript" src="./index.js"></script>
-	</head>
+<head>
+	<title>Frontbook</title>
 
+	<style type="text/css">
 
+	</style>
+</head>
+<body>
+	<div style="margin: 25px 50px; border-left: 1px solid black; border-right: 1px solid black; border-top: 10px solid cyan;border-bottom: 10px solid cyan; background: lightblue">
+		<div style="background: skyblue; padding: 5px;">
+		<b style="font-size: 40px;">Welcome to Frontbook!</b>
+		</div>
 
-	<body>
-
-		<h2>Register to FrontBook</h2>
-			<label>Full Name:</label>
-			<input type="name" name="name" maxlength="36" id="name" required>
+		<div style="padding: 5px;">
+			<b style="font-size: 20px;">Log-in to your Frontbook account</b> <br>
+			<br>
+			<label>Email:</label> <br>
+			<input type="email" name="email" id="login-email"> <br>
+			<label>Password:</label> <br>
+			<input type="password" name="email" id="login-pass"> <br>
+			<button onclick="Login()">Login</button> <br>
+			
 			<br>
 
-			<label>Birthday</label>
-			<input type="date" name="bday" id="bday" required>
+			<b style="font-size: 20px;">New to Frontbook? Register!</b> <br>
 			<br>
+			<label>Email:</label> <br>
+			<input type="email" name="email" id="email"> <br>
 
-			<label>Describe yourself:</label>
-			<input type="text" name="desc" maxlength="100" id="desc" required>
+			<label>Full Name:</label><br>
+			<input type="name" name="name" maxlength="36" id="name"><br>
+
+			<label>Birthday:</label> <br>
+			<input type="date" name="bday" id="bday"><br>
+
+			<label>Describe yourself:</label> <br>
+			<input type="text" name="desc" maxlength="50" id="desc"><br>
+
+			<label>Password:</label> <br>
+			<input type="password" name="email" id="pass"><br>
+
+			<button onclick="Register()">Register</button>
 			<br>
+			<i style="font-size: 13px">Frontbook by Xander Martinez</i>
+		</div>
+	</div>
 
-			<label>Email Address:</label>
-			<input type="Email" name="email" id="email" required>
-			<br>
 
-			<label>Password:</label>
-			<input type="Password" name="pass" id="pass" required>
-			<br>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyB3EbXlPm3cbvVmDGWsj0NCQz4vcffQGFM",
+		    authDomain: "frontbook-4d80.firebaseapp.com",
+		    databaseURL: "https://frontbook-4d80.firebaseio.com",
+		    projectId: "frontbook-4d80",
+		    storageBucket: "frontbook-4d80.appspot.com",
+		    messagingSenderId: "256324083461"
+		  };
+		  firebase.initializeApp(config);
+		</script>
 
-			<button onclick="Register()">Register!</button>
-	</body>
+	<script type="text/javascript" src="./index.js"></script>
+</body>
 </html>
