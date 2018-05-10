@@ -1,14 +1,20 @@
 ## Frontbook
-Facebook Replica made for learning purposes using Google Firebase <br>
+Facebook like site, created for educational purposes.
 
-Features:
-<ul>
-  <li>Log-in & Register</li>
-  <li>Profile</li>
- </ul>
+### Frontbook-Firebase
+Frontbook with the use of Google Firebase.
 
-Future Features:
-<ul>
-  <li>Friends</li>
-  <li>Status</li>
- </ul>
+### Frontbook-LocalStorage
+Frontbook implementing data-structures and basic encryption and only uses LocalStorage to store data.
+
+#### Features
+* Register-Login-Logout account functionalities
+* Profile page viewer [Own profile]
+* Friend List Viewer
+* Friend Request Viewer
+
+#### Future Features
+* Profile page viewer [Other profiles]
+* **Add Friend** functionality
+* **Accept** Friend Requests
+* Finding Mutual Friends
