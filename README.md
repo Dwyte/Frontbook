@@ -1,5 +1,5 @@
 ## Frontbook
-Facebook Replica for Frontliners <br>
+Facebook Replica made for learning purposes using Google Firebase <br>
 
 Features:
 <ul>
