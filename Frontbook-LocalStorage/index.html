@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Frontbook</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+
+<body>
+
+    <div id="top-section">
+        <div id="title">Frontbook</div>
+        <div id="login-section">
+            
+            <div class="login-inputs">
+                <label for="login-email">Email:</label><br>
+                <input type="email" name="login-email" id="login-email">
+            </div>
+    
+            <div class="login-inputs">
+                <label for="login-pass">Password:</label> <br>
+                <input type="password" name="login-pass" id="login-pass"> <button onclick="Login()">Log-in</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div id="register-section">
+                <h1>Sign up</h1>
+                <h3>It's free and and forever will be</h3>
+
+                <div class="register-inputs">
+                        <input type="text" placeholder="First Name" id="register-fname">
+                </div>
+
+                <div class="register-inputs">
+                        <input type="text" placeholder="Last Name" id="register-lname">
+                </div>
+
+                <div class="register-inputs">
+                        <input type="email" placeholder="Email" id="register-email">
+                </div>
+
+                <div class="register-inputs">
+                        <input type="password" placeholder="Password" id="register-pass">
+                </div>
+
+                <div class="register-inputs">
+                        <input type="password" placeholder="Confirm Password" id="register-cpass">
+                </div>
+
+                <div class="register-inputs">
+                    <label for="register-bday">Birthday:</label> <br>
+                    <input type="date" name="register-bday" placeholder="Birthday" id="register-bday">
+                </div>
+
+                <div class="register-inputs">
+                        <input type="radio" name="gender" value="Male" id="Male"> Male
+                        <input type="radio" name="gender" value="Female" id="Female"> Female
+                </div>
+
+                <div class="register-inputs">
+                    <button onclick="Register()">Sign-up</button>
+                </div>
+        </div>
+    </div>
+    
+    <div id="showcase-section">
+        <div id="showcase-tagline">
+                <h1>Welcome to Frontbook!</h1>
+                <i>-Insert front book tagline here-</i>
+        </div>
+    </div>
+    
+</body>
+
+</html>

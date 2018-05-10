@@ -1,0 +1,102 @@
+body{
+    background-color: gainsboro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+}
+
+#top-section{
+    border: 1px dashed darkgray;
+    min-height: 75px;
+    background-color: darkslateblue;
+}
+
+#title{
+    float:left;
+    font-size: 50px;
+    margin: 5px;
+    color: white;
+
+    border: 1px dashed darkgray;
+}
+
+#login-section{
+    float: right;
+    margin: 10px;
+
+    border: 1px dashed darkgray;
+}
+
+.login-inputs{
+    float: left;
+    padding: 5px;
+}
+
+.login-inputs label{
+    font-weight: bold;
+    color: white;
+}
+
+
+
+#register-section{
+    float: left;
+    padding: 10px;
+    background: white;
+
+
+    border: 1px dashed darkgray;
+}
+
+#register-section h1, #register-section h3{
+    margin: 0px;    
+}
+
+.register-inputs{
+    width: 275px;
+    margin: 10px;
+
+    border: 1px dashed darkgray;
+}
+
+.register-inputs input[type=text], .register-inputs input[type=email], .register-inputs input[type=password], .register-inputs input[type=date]{
+    width: 100%;
+    height: 35px;
+    padding: 4px;
+    font-size: 18px;
+
+    border: 1.5px solid darkslategrey;
+    border-radius: 5px;
+}
+
+.register-inputs button{
+    width: 100%;
+    height: 35px;
+
+    background-color: darkslategray;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+}
+
+
+#showcase-section{
+    float: left;
+    min-width: 920px;
+    min-height: 475px;
+    border: 1px dashed darkslategrey;
+}
+
+
+#showcase-tagline{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    text-align: center;
+}
+
+#showcase-tagline h1{
+    margin: 0;
+}
