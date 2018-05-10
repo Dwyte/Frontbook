@@ -18,3 +18,4 @@ Frontbook implementing data-structures and basic encryption and only uses LocalS
 * **Add Friend** functionality
 * **Accept** Friend Requests
 * Finding Mutual Friends
+* Etc.
