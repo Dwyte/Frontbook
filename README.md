@@ -10,12 +10,17 @@ Frontbook implementing data-structures and basic encryption and only uses LocalS
 #### Features
 * Register-Login-Logout account functionalities
 * Profile page viewer [Own profile]
+* Profile page viewer [Other profiles]
 * Friend List Viewer
 * Friend Request Viewer
-
-#### Future Features
-* Profile page viewer [Other profiles]
 * **Add Friend** functionality
 * **Accept** Friend Requests
+
+#### Future Features
 * Finding Mutual Friends
+* Poking friends
+* Notifications
+* Posting Status Updates
+* Timeline
+* Chat
 * Etc.
