@@ -1,7 +1,7 @@
 ## Frontbook
 Facebook like site, created for educational purposes.
 
-### Frontbook-Firebase
+### Frontbook-Firebase [Discontinued]
 Frontbook with the use of Google Firebase.
 
 ### Frontbook-LocalStorage
