@@ -1,5 +1,5 @@
 var frontbook = JSON.parse(localStorage.getItem("frontbook"));
-var currAccount = frontbook.currentAccount;
+var currAccount = frontbook.accounts[frontbook.currentAccount.index]
 
 window.onload = function(){
 	document.getElementById("name").innerHTML = currAccount.fullName;
@@ -26,7 +26,7 @@ function UpdateFriendRequestList(){
 	}
 	for(i = 0; i < currAccount.requests.length; i++){
 		if(currAccount.requests[i] != null){
-			document.getElementById("requests").innerHTML += currAccount.requests[i] + " <button onclick=AcceptFriendRequest("+i+") > Accept </button>";
+			document.getElementById("requests").innerHTML += currAccount.requests[i].fullName + " <button onclick=AcceptFriendRequest("+i+") > Accept </button>";
 		}
 	}
 
@@ -43,11 +43,11 @@ function Hash(string, length){
 
 function AcceptFriendRequest(requestIndex){
 	currAccount.friends.push(currAccount.requests[requestIndex]);
+	frontbook.accounts[currAccount.requests[requestIndex].index].friends.push(currAccount);
 	currAccount.requests.splice(requestIndex, 1);
 	UpdateFriendRequestList();
 	UpdateFriendsList();
-	localStorage.setItem("frontbook", JSON.stringify(frontbook));
-    frontbook = JSON.parse(localStorage.getItem("frontbook"));
+	SaveToDatabase();
 }
 
 
@@ -68,8 +68,7 @@ function UpdateFriendsList(){
 
 	for(i = 0; i < currAccount.friends.length; i++){
 		if(currAccount.friends[i] != null){
-			document.getElementById("friends").innerHTML += currAccount.friends[i];
-			alert(currAccount.friends[i].fullName);
+			document.getElementById("friends").innerHTML += currAccount.friends[i].fullName + "<br>";
 		}
 	}
 }
@@ -77,15 +76,26 @@ function UpdateFriendsList(){
 function UpdateUsersList(){
 	for(i = 0; i < frontbook.accounts.length; i++){
 		if(frontbook.accounts[i] != null){
-			document.getElementById("users").innerHTML += frontbook.accounts[i].fullName + " <button>View Profile</button> <br>"
+			document.getElementById("users").innerHTML += frontbook.accounts[i].fullName + " <button onclick=ViewProfile("+i+")>View Profile</button> <br>"
 		}
 	}
+}
+
+function ViewProfile(accountIndexToView){
+	frontbook.viewedAccount = frontbook.accounts[accountIndexToView];
+	SaveToDatabase();
+	window.location = "./profileviewer.html";
 }
 
 
 function Logout(){
 	currAccount = null;
+	SaveToDatabase();
+    window.location = "./index.html"
+}
+
+
+function SaveToDatabase(){
 	localStorage.setItem("frontbook", JSON.stringify(frontbook));
     frontbook = JSON.parse(localStorage.getItem("frontbook"));
-    window.location = "./index.html"
 }

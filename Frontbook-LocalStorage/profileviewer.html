@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title></title>
+
+		<script type="text/javascript">
+			var frontbook = JSON.parse(localStorage.getItem("frontbook"));
+
+			window.onload = function(){
+				document.getElementById("name").innerHTML = frontbook.viewedAccount.fullName;
+				document.getElementById("email").innerHTML = frontbook.viewedAccount.email;
+				document.getElementById("bday").innerHTML = frontbook.viewedAccount.birthday;
+				document.getElementById("gender").innerHTML = frontbook.viewedAccount.gender;
+			}
+
+			function AddFriend(){
+				frontbook.accounts[frontbook.viewedAccount.index].requests.push(frontbook.currentAccount);
+				localStorage.setItem("frontbook", JSON.stringify(frontbook));
+    			frontbook = JSON.parse(localStorage.getItem("frontbook"));
+			}
+
+			function BackToProfile(){
+				window.location = "./profile.html";
+				frontbook.viewedAccount = null;
+				localStorage.setItem("frontbook", JSON.stringify(frontbook));
+    			frontbook = JSON.parse(localStorage.getItem("frontbook"));
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="name">First and Last Name</div>
+		<div id="email">Email goes here</div>
+		<div id="bday">Birthday</div>
+		<div id="gender">Gender</div>
+		<button id="addFriend" onclick="AddFriend()">Add Friend</button>
+		<button onclick="BackToProfile()">Back to my profile</button>
+	</body>
+</html>

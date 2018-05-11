@@ -1,7 +1,8 @@
 class Frontbook{
     constructor(){
         this.accounts = Array(10); 
-        this.currentAccount = null; 
+        this.currentAccount = null;
+        this.viewedAccount = null;
     }
 }
 
